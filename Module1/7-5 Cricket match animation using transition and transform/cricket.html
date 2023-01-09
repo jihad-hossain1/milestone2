@@ -5,8 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .field{
+            border: 1px solid green;
+        }
+        .ball{
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: red;
+            position: relative;
+            left: 515px;
+            transition: transform 1s ease-out;
+            
+        }
+        .ball:hover{
+            transform: translate(500px);
+        }
+        .bat{
+            width: 200px;
+
+        }
+        .bat:hover {
+            transition: transform 0.2s ease-in ;
+        }
+        .field:hover .bat{
+            transform: rotate(-60deg);
+            transform-origin: top righ;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="field">
+        <img class="bat" src="../images/bat.png" alt="">
+        <div class="ball"></div>
+    </div>
 </body>
 </html>
