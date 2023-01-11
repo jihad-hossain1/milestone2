@@ -205,10 +205,6 @@ input{
     text-decoration: none;
 }
 
-.hide{
-    display: none;
-}
-
 /* responsive style  */
 
 @media screen and (max-width: 576px) {
@@ -234,6 +230,7 @@ input{
     nav ul{
         flex-direction: column;
         gap: 20px;
+        align-items: flex-start;
     }
     .about, .contact{
         padding: 20px;
@@ -248,5 +245,20 @@ input{
         flex-direction: column;
         padding: 20px;
         gap: 10px;
+    }
+    .contact, .banner{
+        flex-direction: column;
+    }
+    .contact input[type="text"], input[type="email"], textarea{
+        padding: 0 0 0 5px;
+    }
+    nav ul{
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        padding-left: 20px;
+    }
+    nav li{
+        margin-left: 0;
     }
 }
