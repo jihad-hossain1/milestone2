@@ -1,5 +1,53 @@
+    * {
+        margin: 0;
+
+    }
+
     /* fonts  */
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    /* header section style  */
+    .header {
+        background: #562EFF;
+        height: 94px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-left: 500px;
+    }
+
+    .header .logo img {
+        height: 40px;
+
+    }
+
+    .logo-title {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 24px;
+    }
+
+    .navi {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+    }
+    .navi .pro-img{
+        padding-left: 34px;
+        padding-right: 497px;
+    }
+    .navi div a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 16px;
+        padding: 15px;
+    }
 
     /* commont styes or utilites */
     body {
@@ -104,72 +152,101 @@
     /* ---------------
         courses style 
 ------------------------*/
-.courses{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 24px;
-}
-.course .course-banner img {
-    width: 224px;
-    height: 104px;
-}
-.course-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.fa-star{
-    font-size: 12px;
-}
-.fa-star.filed{
-    color: #FFC014;
-}
-.fa-star.empty{
-    color: #AEAEAE;
-}
-.course-duration{
-    color: #FF4A60;
-    background: #FFE4E8;
-    padding: 2px;
-    border-radius: 7px;
-}
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 24px;
+    }
+
+    .course .course-banner img {
+        width: 224px;
+        height: 104px;
+    }
+
+    .course-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .fa-star {
+        font-size: 12px;
+    }
+
+    .fa-star.filed {
+        color: #FFC014;
+    }
+
+    .fa-star.empty {
+        color: #AEAEAE;
+    }
+
+    .course-duration {
+        color: #FF4A60;
+        background: #FFE4E8;
+        padding: 2px;
+        border-radius: 7px;
+    }
 
 
 
-/* ------------------
+    /* ------------------
     Media Queries
 ----------------------*/
 
-/* Mobile Devices */
+    /* Mobile Devices */
 
-@media only screen and (max-width: 688px) {
-    .container{
-        width: 100%;
-    }
-    .players{
-        grid-template-columns: repeat(2,1fr);
-    }
-    .blogs, .courses{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .player, .blog{
-        flex-direction: column;
+    @media only screen and (max-width: 688px) {
+        /* .hide{
+            display: none; */
+        
+        .container {
+            width: 100%;
+        }
+
+        .players {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .blogs,
+        .courses {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .player,
+        .blog {
+            flex-direction: column;
+        }
+
     }
 
-}
+    /* Tablet devices */
 
-/* Tablet devices */
-
-@media only screen and (min-width: 589px) and (max-width: 992px) {
-    .container{
-        width: 100%;
-        margin-left: 20px;
+    @media only screen and (min-width: 589px) and (max-width: 992px) {
+        /* .hide{
+            display: none; */
+        
+        .logo{
+            margin-left: 100px;
+            padding: 0;
+        }
+        .navi .pro-img{
+            padding-left: 30px;
+            padding-right: 110px;
+        }
+        .container {
+            width: 100%;
+            margin-left: 20px;
+        }
+        .player{
+            margin-bottom: 20px;
+        }
+        .players {
+            grid-template-columns: repeat(2, 1fr);
+            margin-left: 70px;
+        }
+        
+        .course-info {
+            margin-bottom: 15px;
+        }
     }
-    .players{
-        grid-template-columns: repeat(2,1fr);
-        margin-left: 70px;
-    }
-    .course-info{
-        margin-bottom: 15px;
-    }
-}
